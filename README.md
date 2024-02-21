@@ -55,4 +55,7 @@ Here is the test output result;
 
 ![Output](assets/output.gif)
 
-After testing the code with 1000 250*250 grids, we see that it successfully manages to compute threshold value very precisely. 
+After testing the code with 1000 250*250 grids, we see that it successfully manages to compute threshold value very precisely.
+
+MstfTurgut
+mstftrgt00@gmail.com
