@@ -2,11 +2,13 @@
 
 This project uses Monte Carlo simulation and a strong union-find data structure to efficiently estimate the percolation threshold. Percolation is important in fields like materials science and network analysis, and our implementation aims to provide a precise estimation of the threshold value.
 
+<br>
 
 ## Percolation
 
 Given a composite systems comprised of randomly distributed insulating and metallic materials: what fraction of the materials need to be metallic so that the composite system is an electrical conductor? Scientists have defined an abstract process known as percolation to model such situations.
 
+<br>
 
 ## The model
 
@@ -15,6 +17,8 @@ We model a percolation system using an n-by-n grid of sites. Each site is either
 
 ![Model](assets/model.png)
 
+<br>
+
 ## The Problem
 
 In a famous scientific problem, researchers are interested in the following question: if sites are independently set to be open with probability p (and therefore blocked with probability 1 − p), what is the probability that the system percolates? When p equals 0, the system does not percolate; when p equals 1, the system percolates. The plots below show the site vacancy probability p versus the percolation probability for 20-by-20 random grid (left) and 100-by-100 random grid (right).
@@ -22,6 +26,8 @@ In a famous scientific problem, researchers are interested in the following ques
 ![Problem](assets/problem.png)
 
 When n is sufficiently large, there is a threshold value p* such that when p < p* a random n-by-n grid almost never percolates, and when p > p*, a random n-by-n grid almost always percolates.  Our aim is to estimate p*.
+
+<br>
 
 ## What Is Monte Carlo Simulation ?
 
@@ -36,6 +42,8 @@ To estimate the percolation threshold, we consider the following computational e
 For example, if sites are opened in a 20-by-20 grid according to the snapshots below, then our estimate of the percolation threshold is 204/400 = 0.51 because the system percolates when the 204th site is opened.
 
 ![Monte-Carlo](assets/monte.png)
+
+<br>
 
 ## The Code
 
