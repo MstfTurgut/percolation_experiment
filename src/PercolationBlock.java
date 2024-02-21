@@ -2,10 +2,10 @@
 public class PercolationBlock {
 
     private int openSiteCount;
-    private int[] id;
-    private int[] vacancy;
-    private int[] size;
-    private int n;
+    private final int[] id;
+    private final int[] vacancy;
+    private final int[] size;
+    private final int n;
 
     public PercolationBlock(int n) {
         this.n = n;
@@ -56,7 +56,7 @@ public class PercolationBlock {
         return root(index1) == root(index2);
     }
 
-    public void openSite(int index) {
+    public void open(int index) {
 
         if(vacancy[index] != 1) {
             openSiteCount++;
@@ -91,11 +91,11 @@ public class PercolationBlock {
 
     }
 
-    public boolean percolating() {
+    public boolean percolates() {
         return connected(id.length - 2 , id.length - 1);
     }
 
-    public int getOpenSiteCount() {
+    public int numberOfOpenSites() {
         return openSiteCount;
     }
 }

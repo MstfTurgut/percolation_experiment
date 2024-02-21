@@ -12,7 +12,7 @@ public class PercolationTest {
 
         for(int i = 0 ; i < experimentNumber ; i++) {
             sum += testPercolation(100);
-            System.out.println("%" + (i / (double)experimentNumber) * 100);
+            System.out.println("Testing : %" + (i / (double)experimentNumber) * 100);
         }
 
         System.out.println("Result : " +  sum  / experimentNumber);
@@ -27,15 +27,15 @@ public class PercolationTest {
 
         int indexToOpen;
 
-        while (!block.percolating()) {
+        while (!block.percolates()) {
 
             indexToOpen = random.nextInt(length);
 
-            block.openSite(indexToOpen);
+            block.open(indexToOpen);
 
         }
 
-        return ((double)block.getOpenSiteCount() / length);
+        return ((double)block.numberOfOpenSites() / length);
     }
 
 }
